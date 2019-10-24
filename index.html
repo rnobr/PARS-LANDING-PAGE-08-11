@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>1ª Festa de Encerramento - PARS || Autodesk</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <a id="PARS" style="top: 1%; left: 40%; width: 7.5%; height: 1%" href="http://www.pars.com.br/" target="_blank"></a>
+            <a id="Autodesk" style="top: 1%; left: 48.5%; width: 7%; height: 1%" href="https://www.autodesk.com/" target="_blank"></a>
+            <a id="Home" style="top: 1%; left: 57%; width: 2.9%; height: 1%" onclick="scrollToTop()"></a>
+            <a id="Evento" style="top: 1%; left: 61%; width: 4.2%; height: 1%" onclick="scrollToEvent()"></a>
+            <a id="Hospedagem" style="top: 1%; left: 66.5%; width: 5.5%; height: 1%" onclick="scrollToHosting()"></a>
+            <a id="QBR" style="top: 1%; left: 73.2%; width: 2.5%; height: 1%" onclick="scrollToQBR()"></a>
+            <a id="Transfer" style="top: 1%; left: 76.8%; width: 4.2%; height: 1%" onclick="scrollToTransfer()"></a>
+
+            <div class="image" style="background-image: url(base.png)">
+                <img src="base.png" class="hidden-image" alt="Hidden"/>
+            </div>
+        </div>
+    </body>
+    <script>
+        function scrollToTop() { scrollTo(0) }
+        function scrollToEvent() { scrollTo(20) }
+        function scrollToHosting() { scrollTo(60) }
+        function scrollToQBR() { scrollTo(84) }
+        function scrollToTransfer() { scrollTo(90) }
+
+        function scrollTo(pct) {
+            let scrollingElement = (document.scrollingElement || document.body);
+            document.body.scrollTop = (document.body.scrollHeight / 100) * pct;
+        }
+    </script>
+</html>
