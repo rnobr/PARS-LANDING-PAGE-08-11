@@ -59,7 +59,6 @@
 				</div>
 			</div>
 		</div>
-
     </body>
     <script>    	
         function scrollToTop() { scrollTo(0) }
@@ -80,5 +79,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
     	$("#video-modal").modal();
+
+		$("#video-modal").on("hidden.bs.modal", function () {
+			$("video").each(function(){
+				$(this).get(0).pause();
+			});
+			//$("#video-modal")[0].muted = true;
+		});
     </script>
 </html>
