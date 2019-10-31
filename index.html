@@ -3,31 +3,36 @@
     <head>
         <meta charset="utf-8">
         <title>1ª Festa de Encerramento - PARS || Autodesk</title>
-        <link rel="stylesheet" href="style.css">
         <meta name="description" content="Que o marketing da PARS AMA produzir um evento não é novidade. Ao longo dos últimos anos foram organizadas inúmeras atividades em conjunto...">
         <meta name="author" content="Lucas Craveiro Paes">
 
         <link rel="icon" href="logo-min.png"/>
         <link rel="shortcut icon" href="logo-min.png"/>
 
-        <!-- Twitter Card data -->
-       <meta name="twitter:card" value="summary">
-       <meta name="twitter:site" content="@lucascraveirop1">
-       <meta name="twitter:title" content="1ª Festa de Encerramento - PARS || Autodesk">
-       <meta name="twitter:description" content="Que o marketing da PARS AMA produzir um evento não é novidade. Ao longo dos últimos anos foram organizadas inúmeras atividades em conjunto...">
-       <meta name="twitter:creator" content="@lucascraveirop1">
-       <meta name="twitter:image" content="banner-min.png">
+		<!-- Bootstrap Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-       <!-- Open Graph data -->
-       <meta property="og:title" content="1ª Festa de Encerramento - PARS || Autodesk" />
-       <meta property="og:type" content="article" />
-       <meta property="og:url" content="http://vemprailha2019.com.br"/>
-       <!-- IMAGE MUST HAVE 1200x630 -->
-       <meta property="og:image" content="banner-min.png" />
-       <meta property="og:description" content="Que o marketing da PARS AMA produzir um evento não é novidade. Ao longo dos últimos anos foram organizadas inúmeras atividades em conjunto..." />
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" value="summary">
+		<meta name="twitter:site" content="@lucascraveirop1">
+		<meta name="twitter:title" content="1ª Festa de Encerramento - PARS || Autodesk">
+		<meta name="twitter:description" content="Que o marketing da PARS AMA produzir um evento não é novidade. Ao longo dos últimos anos foram organizadas inúmeras atividades em conjunto...">
+		<meta name="twitter:creator" content="@lucascraveirop1">
+		<meta name="twitter:image" content="banner-min.png">
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="1ª Festa de Encerramento - PARS || Autodesk" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://vemprailha2019.com.br"/>
+		<!-- IMAGE MUST HAVE 1200x630 -->
+		<meta property="og:image" content="banner-min.png" />
+		<meta property="og:description" content="Que o marketing da PARS AMA produzir um evento não é novidade. Ao longo dos últimos anos foram organizadas inúmeras atividades em conjunto..." />
+
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
+        <div class="content">
             <a id="PARS" style="top: 1%; left: 40%; width: 7.5%; height: 1%" href="http://www.pars.com.br/" target="_blank"></a>
             <a id="Autodesk" style="top: 1%; left: 48.5%; width: 7%; height: 1%" href="https://www.autodesk.com/" target="_blank"></a>
             <a id="Home" style="top: 1%; left: 57%; width: 2.9%; height: 1%" onclick="scrollToTop()"></a>
@@ -40,8 +45,23 @@
                 <img src="base-3-min.png" class="hidden-image" alt="Hidden"/>
             </div>
         </div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="video-modal-label" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<video id="video-player" width="100%" height="100%" autoplay controls>
+							<source src="video.mp4" type="video/mp4">
+							Seu navegador não suporta a exibição de vídeos
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+
     </body>
-    <script>
+    <script>    	
         function scrollToTop() { scrollTo(0) }
         function scrollToEvent() { scrollTo(20) }
         function scrollToHosting() { scrollTo(60) }
@@ -52,5 +72,13 @@
             let scrollingElement = (document.scrollingElement || document.body);
             document.body.scrollTop = (document.body.scrollHeight / 100) * pct;
         }
+    </script>
+
+    <!-- Bootstrap Files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    	$("#video-modal").modal();
     </script>
 </html>

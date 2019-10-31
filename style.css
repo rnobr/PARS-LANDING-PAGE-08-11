@@ -13,7 +13,7 @@ a {
         cursor: pointer;
     }
 
-.container {
+.content {
     position: relative;
     background-position: top;
     background-repeat: no-repeat;
@@ -32,3 +32,10 @@ a {
         object-fit: contain;
         width: -webkit-fill-available;
     }
+
+.modal-body, .modal-content {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    line-height: 0px;
+}
